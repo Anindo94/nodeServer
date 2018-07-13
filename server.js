@@ -1,6 +1,7 @@
 const express = require('express');
 const ejs = require('ejs');
 
+const port = process.env.PORT || 3000;
 var app = express();
 
 
@@ -32,6 +33,6 @@ errorMsg:'this is an error !'
     });
 })
 
-app.listen(3000,()=>{
-    console.log('server is up on 3000...');
+app.listen(port, () => {
+    console.log(`server is up on ${port}`);
 });
